@@ -1,0 +1,12 @@
+/*
+* extending styles to use sbrick-icon as a view
+*/
+
+.sbrick-icon-view .sbrick-icon__port {
+	transition: color 0.3s, box-shadow 0.3s;
+}
+
+.sbrick-icon-view .sbrick-icon__port--is-active {
+	color: cornflowerblue;
+	box-shadow: rgba(100, 149, 237, 0.6) 0 0 5px 2px
+}

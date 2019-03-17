@@ -1,0 +1,51 @@
+
+
+
+/*-- Start buttons --*/
+
+	.btn {
+		display: inline-block;
+		margin: 0 1em 1em 0;
+		border: none;
+		padding: 0.8em;
+		background: #999;
+		color: white;
+		font: inherit;
+		cursor: pointer;
+	}
+
+	.btn--start {
+		background: seagreen;
+	}
+	.btn--start:hover,
+	.btn--start:focus {
+		background: #20603b;
+	}
+
+	.btn--connect {
+		width: 10em;
+	}
+
+	.btn--stop {
+		background: crimson;
+	}
+	.btn--stop:hover,
+	.btn--stop:focus {
+		background: #bb1133;
+	}
+
+
+	.btn--info {
+		background: royalblue;
+	}
+	.btn--info:hover,
+	.btn--info:focus {
+		background: #1f49c7;
+	}
+
+	.btn--is-busy {
+		opacity: 0.5;
+		cursor: wait;
+	}
+
+/*-- End buttons --*/

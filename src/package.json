@@ -1,0 +1,18 @@
+{
+  "name": "bluetooth-legobot",
+  "version": "1.0.0",
+  "description": "a bluetooth lego robot listening to twitter",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Jarón Barends",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "socket.io": "^2.2.0",
+    "socket.io-client": "^2.2.0",
+    "twit": "^2.2.11"
+  }
+}

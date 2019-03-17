@@ -1,0 +1,12 @@
+.log-window {
+	display: none;
+	text-align: left;
+	transform: translateY(560px);/* viewport height */
+	padding: 0.5em;
+	font-size: 1.2rem;
+	background: beige;
+}
+
+.log-window p {
+	margin: 0 0 0.3em;
+}

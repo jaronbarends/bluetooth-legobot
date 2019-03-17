@@ -1,0 +1,131 @@
+
+.btn-container--drive,
+.btn-container--lights {
+	margin: 2em auto;
+	text-align: center;
+}
+
+.btn--drive,
+.btn--lights {
+	padding: 0;
+	width: 32px;
+}
+
+.btn--lights {
+	width: 60px;
+}
+
+
+.btn--lights[href="25"]  	{ background: rgba(255, 255, 205, 0.2); }
+.btn--lights[href="50"]  	{ background: rgba(255, 255, 205, 0.4); }
+.btn--lights[href="75"]  	{ background: rgba(255, 255, 205, 0.6); }
+.btn--lights[href="100"] 	{ background: rgba(255, 255, 205, 0.8); }
+.btn--drive[href="0"]		{ background: rgba(0, 0, 0, 0.05); }
+.btn--drive[href*="25"]		{ background: rgba(0, 0, 0, 0.10); }
+.btn--drive[href*="50"]		{ background: rgba(0, 0, 0, 0.15); }
+.btn--drive[href*="75"]		{ background: rgba(0, 0, 0, 0.20); }
+.btn--drive[href*="100"]	{ background: rgba(0, 0, 0, 0.32); }
+
+
+.btn-container--servo {
+	position: relative;
+	margin: 0 auto 20px;
+	width: 300px;
+	height: 180px;
+}
+
+.btn--servo {
+	/*display: block;*/
+	position: absolute;
+	border: none;
+	width: 0;
+	height: 0;
+	top: 0;
+	left: 50%;
+	transform-origin: 0px 150px;
+}
+
+.btn--servo::after {
+	content: '';
+	position: absolute;
+	box-sizing: border-box;
+	display: block;
+	top: -16px;
+	left: -16px;
+	width: 32px;
+	height: 32px;
+	border: 2px solid rgba(0,0,0,0.1);
+	border-radius: 50%;
+	background: rgba(0, 0, 0, 0.05);
+	transition: background-color 0.3s,
+				color 0.3s;
+}
+
+.btn--servo[data-angle="-90"] { transform: rotate(-90deg) translateX(-3px); }/* this angle differs 12 deg with next, so adjust a bit */
+.btn--servo[data-angle="-78"] { transform: rotate(-78deg); }
+.btn--servo[data-angle="-65"] { transform: rotate(-65deg); }
+.btn--servo[data-angle="-52"] { transform: rotate(-52deg); }
+.btn--servo[data-angle="-39"] { transform: rotate(-39deg); }
+.btn--servo[data-angle="-26"] { transform: rotate(-26deg); }
+.btn--servo[data-angle="-13"] { transform: rotate(-13deg); }
+.btn--servo[data-angle="13"]  { transform: rotate(13deg); }
+.btn--servo[data-angle="26"]  { transform: rotate(26deg); }
+.btn--servo[data-angle="39"]  { transform: rotate(39deg); }
+.btn--servo[data-angle="52"]  { transform: rotate(52deg); }
+.btn--servo[data-angle="65"]  { transform: rotate(65deg); }
+.btn--servo[data-angle="78"]  { transform: rotate(78deg); }
+.btn--servo[data-angle="90"]  { transform: rotate(90deg) translateX(3px); }/* this angle differs 12 deg with previous, so adjust a bit */
+
+
+
+
+.btn[href].btn--is-active:not(.switch),
+.btn--servo.btn--is-active::after {
+	/*add .btn[href] selector to increase specificity */
+	background: cornflowerblue;
+	color: white;
+}
+
+.switch {
+	position: relative;
+	background: none;
+}
+
+.switch::after {
+	display: block;
+	position: absolute;
+	content: '';
+	top: 2px;
+	left: 2px;
+	border: 2px solid rgba(0,0,0,0.1);
+	border-radius: 3px;
+	height: calc(100% - 4px);
+	width: 50%;
+	background: rgb(229, 229, 229);
+	transition: transform 0.2s, background-color 0.3s;
+}
+
+.switch[href].btn--is-active {
+}
+
+.switch.btn--is-active::after {
+	background: cornflowerblue;
+	transform: translateX(90%);
+}
+
+.switch--on,
+.switch--off {
+	display: inline-block;
+	width: 20px;
+	font-size: 1.2rem;
+	text-transform: uppercase;
+}
+
+.switch--on {
+	margin-right: 6px;
+	color: cornflowerblue;
+}
+
+.btn--stop-all {
+	margin: 0 1em;
+}
