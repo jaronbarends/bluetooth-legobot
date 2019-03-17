@@ -248,6 +248,8 @@
 						direction: valueStr.indexOf('-') === 0 ? mySBrick.CCW : mySBrick.CW
 					};
 
+					console.log(data);
+
 					switch (func) {
 						case 'lights':
 							mySBrick.setLights(data);

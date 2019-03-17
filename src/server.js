@@ -26,7 +26,7 @@ var express = require('express')
 
 
 
-var watchList = ['ajax'];
+var watchList = ['@btlegobot'];
 var T = new Twit({
     consumer_key:         'oQoLcduD8tWK3F0D1XKHpF1Sg'
   , consumer_secret:      'TZMJUcboKLDabUgFtI15LHgJU1UdM1an8IEA5Jft03advvERHO'
@@ -43,7 +43,7 @@ io.sockets.on('connection', function (socket) {
 
   stream.on('tweet', function (tweet) {
 
-    io.sockets.emit('stream',tweet.text);
+    io.sockets.emit('stream', tweet.text);
 
   });
 });
