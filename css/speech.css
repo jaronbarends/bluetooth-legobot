@@ -1,0 +1,40 @@
+.speech-interface {
+	display: inline-block;
+	margin: 1em auto 0;
+	border: 2px solid rgba(0,0,0,0.1);
+	border-radius: 5px;
+}
+
+.btn-container--mic {
+	display: inline-block;
+}
+
+.btn--mic {
+	background: transparent;
+	height: auto;
+	width: auto;
+	padding: 0;
+	line-height: 1;
+	border: none;
+}
+
+
+.results {
+	display: inline-block;
+	margin: 0;
+	border-left: 1px solid rgba(0,0,0,0.1);
+	padding: 1em;
+	height: 54px;
+	min-height: 1.3em 1em 0;
+	min-width: 15em;
+	text-align: left;
+	vertical-align: top;
+}
+
+.interim {
+	background: #ffe6cc;
+}
+
+.final {
+	background:  #e6ffe6;
+}

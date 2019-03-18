@@ -1,0 +1,139 @@
+.sbrick-icon {
+	/*position: absolute;
+	top: 30px;
+	right: 70px;*/
+	position: relative;
+	margin: 1em auto 0;
+	width: 56px;
+	height: 31px;
+	color: #999;
+}
+
+.sbrick-icon * {
+	box-sizing: border-box;
+}
+
+.sbrick-icon__face,
+.sbrick-icon__port {
+	display: block;
+	position: absolute;
+	border: 2px solid currentColor;
+}
+
+/* all top */
+.sbrick-icon__face--front-top,
+.sbrick-icon__face--side-top {
+	top: 0;
+	left: 0;
+	height: 10px;
+}
+
+/* all bottom */
+.sbrick-icon__face--front-bottom,
+.sbrick-icon__face--side-bottom {
+	top: 8px;
+	height: 20px;
+}
+
+.sbrick-icon__face--front-bottom::before,
+.sbrick-icon__face--front-bottom::after {
+	position: absolute;
+	display: block;
+	content: '';
+	left: 0;
+	top: 4px;
+	border-top: 1px solid currentColor;
+	width: 100%;
+	opacity: 0.5;
+}
+
+.sbrick-icon__face--front-bottom::after {
+	left: auto;
+	right: 100%;
+	width: 18px;
+	color: white;
+}
+
+/* all front */
+.sbrick-icon__face--front-top,
+.sbrick-icon__face--front-bottom {
+	width: 40px;
+}
+
+/* all side */
+.sbrick-icon__face--side-top,
+.sbrick-icon__face--side-bottom {
+	position: absolute;
+	background: currentColor;
+}
+
+.sbrick-icon__face--side-top {
+	width: 8px;
+}
+
+.sbrick-icon__face--front-top {
+	left: 8px;
+}
+
+.sbrick-icon__face--side-bottom {
+	width: 16px;
+}
+
+.sbrick-icon__face--front-bottom {
+	left: 16px;
+}
+
+.sbrick-icon__face--side-bottom::before,
+.sbrick-icon__face--side-bottom::after,
+.sbrick-icon__port::before {
+	position: absolute;
+	content: '';
+	display: block;
+	border-radius: 50%;
+	width: 3px;
+	height: 8px;
+	background: white;
+	right: 0px;
+	bottom: 2px;
+}
+
+.sbrick-icon__face--side-bottom::after {
+	right: 5px;
+}
+
+.sbrick-icon__port,
+.sbrick-icon__port::before {
+	width: 15px;
+	height: 5px;
+	left: 9px;
+	top: -3px;
+}
+
+.sbrick-icon__port {
+	background: white;
+}
+
+.sbrick-icon__port::before {
+	position: absolute;
+	top: -2px;/* border width */
+	left: auto;
+	right: 100%;
+	border-radius: 0;
+	width: 6px;
+	height: 5px;
+	background: currentColor;
+}
+
+.sbrick-icon__port--top-right {
+	left: 30px;
+}
+
+.sbrick-icon__port--bottom-left,
+.sbrick-icon__port--bottom-right {
+	top: 5px;
+	left: 17px;
+}
+
+.sbrick-icon__port--bottom-right {
+	left: 38px;
+}
