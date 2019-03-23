@@ -1,8 +1,9 @@
-var express = require('express')
-  , app = express()
-  , http = require('http')
-  , server = http.createServer(app)
-  ,Twit = require('twit');
+const apikeys = require('./apikeys.js');
+var express = require('express'),
+  app = express(),
+  http = require('http'),
+  server = http.createServer(app),
+  Twit = require('twit');
 
 
 	//set port that we'll use
@@ -21,17 +22,10 @@ var express = require('express')
 
 
 var watchList = ['@btlegobot'];
-var T = new Twit({
-    consumer_key:         'oQoLcduD8tWK3F0D1XKHpF1Sg'
-  , consumer_secret:      'TZMJUcboKLDabUgFtI15LHgJU1UdM1an8IEA5Jft03advvERHO'
-  , access_token:         '5957202-ekV38dPB6mrUDTfIseMK6oaZ0L6Z6AfUEPFKBGhewg'
-  , access_token_secret:  'ULmQW5qrjgEJB00NyWDZCpWZ3aJc7fsLQgPL0RrSHBLcQ'
-});
 
+var T = new Twit(apikeys);
 
 io.sockets.on('connection', function (socket) {
-  console.log('Connected');
-
 
  var stream = T.stream('statuses/filter', { track: watchList })
 
