@@ -88,7 +88,7 @@
 	* @returns {undefined}
 	*/
 	const blink = function(counter = 0) {
-		const totalBlinks = 10;
+		const totalBlinks = 5;
 		const dur = 150;
 		if (counter < totalBlinks) {
 			counter++;
@@ -110,7 +110,7 @@
 	* @returns {undefined}
 	*/
 	const freshAir = function() {
-		const dur = 3000;
+		const dur = 2500;
 		mySBrick.setDrive(freshAirData);
 		setTimeout(() => {
 			mySBrick.setDrive(stopFreshAirData);
